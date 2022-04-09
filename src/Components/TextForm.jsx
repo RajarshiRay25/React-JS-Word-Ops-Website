@@ -16,6 +16,11 @@ function TextForm(props) {
     const clickHandle3= ()=>{
         setText("");
     }
+    const clickHandle4= ()=>{
+        let copyText = document.getElementById("myText");
+        copyText.select();
+        navigator.clipboard.writeText(copyText.value)
+    }
     const[text,setText] = useState("Enter Text")
     console.log(text)
     return (
@@ -29,6 +34,8 @@ function TextForm(props) {
             <button className="btn btn-primary mx-2" onClick={clickHandle}>Convert to UpperCase</button>
             <button className="btn btn-primary mx-2" onClick={clickHandle2}>Convert to LowerCase</button>
             <button className="btn btn-primary mx-2" onClick={clickHandle3}>Clear Text</button>
+            <button className="btn btn-primary mx-2"  onClick={clickHandle4}>Copy Text</button>
+            
         </div>
         <div className="main2 my-3">
             <h2>Summary</h2>
