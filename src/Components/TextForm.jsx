@@ -26,18 +26,18 @@ function TextForm(props) {
     return (
         <>
         <div className="main">
-            <div className="mb-3">
+            <div className="mb-3 mx-3">
                 <h1>{props.textHead}</h1>
                 <label for="myText" className="form-label">Example textarea</label>
                 <textarea className="form-control" id="myText" rows="8" value={text} onChange={changeHandle}></textarea>
             </div>
-            <button className="btn btn-primary mx-2" onClick={clickHandle}>Convert to UpperCase</button>
-            <button className="btn btn-primary mx-2" onClick={clickHandle2}>Convert to LowerCase</button>
-            <button className="btn btn-primary mx-2" onClick={clickHandle3}>Clear Text</button>
-            <button className="btn btn-primary mx-2"  onClick={clickHandle4}>Copy Text</button>
+            <button className="btn btn-primary mx-3" onClick={clickHandle}>Convert to UpperCase</button>
+            <button className="btn btn-primary mx-3" onClick={clickHandle2}>Convert to LowerCase</button>
+            <button className="btn btn-primary mx-3" onClick={clickHandle3}>Clear Text</button>
+            <button className="btn btn-primary mx-3"  onClick={clickHandle4}>Copy Text</button>
             
         </div>
-        <div className="main2 my-3">
+        <div className="main2 mx-3">
             <h2>Summary</h2>
             <p>Number of Words : {text.split(" ").length} </p>
             <p>Number of Characters : {text.length}</p>
